@@ -1,0 +1,44 @@
+import os,sys
+import shutil
+old_path="C:\\Users\\lirui\\Desktop\\smas"
+Paste_JPG_folder = r"C:\Users\lirui\Desktop\1imgs"
+Paste_label_folder = r"C:\Users\lirui\Desktop\1label"
+#save_path=
+
+filenames = os.listdir(old_path)
+#print(filenames)
+
+newname = 1
+#for filefolder in filenames:
+
+    #file_path = os.path.join(old_path,filefolder)
+    #print(file_path)
+    #file =  os.listdir(file_path)[0]
+    #print(file)
+    #final_path = os.path.join(file_path,file)
+    #print(final_path)
+    #for i in final_path:
+      #new_png_file = Paste_JPG_folder + "\\" + str(newname) + ".png"
+      #shutil.copyfile(final_path, new_png_file)
+
+    #newname = newname + 1
+for filefolder in filenames:
+
+    file_path = os.path.join(old_path, filefolder)
+    # print(file_path)
+    file = os.listdir(file_path)[2]
+    # print(file)
+    final_path = os.path.join(file_path, file)
+    print(final_path)
+    for i in final_path:
+        new_png_file = Paste_label_folder + "\\" + str(newname) + ".png"
+        shutil.copyfile(final_path, new_png_file)
+
+    newname = newname + 1
+
+    #for i in range(len(file)):
+     #if (os.path.splitext(file[i])[0] == "img"):
+
+         #img_path =
+    #os.rename(file,str(newname))
+    #newname = newname + 1
